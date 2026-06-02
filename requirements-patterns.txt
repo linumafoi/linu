@@ -1,0 +1,14 @@
+# Dependencies for the SQL pattern cache (query_cache package).
+# The cache itself uses only the Python standard library + psycopg2; embeddings
+# are served by your local Ollama instance over HTTP (no Python client needed).
+
+psycopg2-binary>=2.9        # Postgres driver (use psycopg2 in production builds)
+
+# Postgres-side requirement (install once, not via pip):
+#   The pgvector extension must be available on the KB database.
+#   - Docker:        use the `pgvector/pgvector:pg16` image, or
+#   - From source:   https://github.com/pgvector/pgvector#installation
+#   Then the cache runs: CREATE EXTENSION IF NOT EXISTS vector;
+#
+# Ollama embedding model (pull once on the host):
+#   ollama pull nomic-embed-text
