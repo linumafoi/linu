@@ -1,0 +1,17 @@
+# ── LLM (local Ollama — no API key, no internet required) ─────────────────────
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama3.2
+
+# ── Database ───────────────────────────────────────────────────────────────────
+DB_NAME=KB
+DB_USER=postgres
+DB_PASSWORD=Mafoi@123
+DB_HOST=localhost
+DB_PORT=5433
+
+# ── Email (optional — only used for ticket notifications) ──────────────────────
+# Leave blank to disable email notifications entirely.
+# For Gmail: enable 2FA and use an App Password (not your real password).
+# Generate one at: https://myaccount.google.com/apppasswords
+SMTP_USER=mounika.dbi@gmail.com
+SMTP_PASS=pvok pqnp wiyk apcz
